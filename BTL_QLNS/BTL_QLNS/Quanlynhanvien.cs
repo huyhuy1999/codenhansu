@@ -93,8 +93,8 @@ namespace BTL_QLNS
             Quanlynhanvien_Load(sender, e);
         }        private void btnXoa_Click(object sender, EventArgs e)
         {
-            nvb.deleteNV(txtMaNv.Text);
-            Quanlynhanvien_Load(sender, e);
+            nvb.deleteNV(txtMaNv.Text);// gọi hàm xóa nhân viên
+            Quanlynhanvien_Load(sender, e);// load lên dataview
         }
 
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
