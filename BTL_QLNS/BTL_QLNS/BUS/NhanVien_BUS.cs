@@ -46,15 +46,15 @@ namespace BTL_QLNS.BUS
                 MessageBox.Show(ex.Message);
             }
         }
-        public void deleteNV(String manv)
+        public void deleteNV(String manv)//tạo hàm xóa 
         {
-            String sql = "delete Nhanvien where id_Nv='" + manv + "'";
-            try
+            String sql = "delete Nhanvien where id_Nv='" + manv + "'"; // câu truy vấn
+            try//đưa vào xử lý ngoại lệ
             {
-                dt.ExcuteNonQuery(sql);
+                dt.ExcuteNonQuery(sql);//gọi hàm thực thi câu lệnh query
                 MessageBox.Show("Xóa thành công !");
             }
-            catch (SqlException ex)
+            catch (SqlException ex)// nếu try lỗi đẩy xg catch bắt lỗi
             {
                 MessageBox.Show("Lỗi CSDL !" + ex.Message);
 
