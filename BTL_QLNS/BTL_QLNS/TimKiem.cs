@@ -36,7 +36,7 @@ namespace BTL_QLNS
                 // Tìm theo pb
                 dgvtimkiem.DataSource = tkb.TimKiem(false, txtmacantim.Text);
             }
-            else
+            else 
             {
                 // Tìm theo manv
                 dgvtimkiem.DataSource = tkb.TimKiem(true, txtmacantim.Text);
