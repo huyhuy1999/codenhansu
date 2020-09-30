@@ -26,14 +26,12 @@ namespace BTL_QLNS.BUS
                 {
                     sql = "select nv.id_Nv,nv.name_Nv,FORMAT(nv.ngaysinh_Nv, 'dd/MM/yyyy ') ngay_sinh,nv.diachi_Nv,pb.name_Pb from NHANVIEN nv inner join PHONGBAN pb on nv.id_Pb = pb.id_Pb where nv.id_Nv = '" + keyword + "'order by pb.name_Pb";
                 }
-                else if(type == false)
+                else 
                 {
                     //Column = "id_Nv AS 'mã nhân viên',name_NV AS'tên nhân viên',ngaysinh_Nv AS 'ngày sinh',name_Pb AS 'Tên phòng ban',luong_NV AS'lương',";
                     sql = "select nv.id_Nv , nv.name_Nv,FORMAT(nv.ngaysinh_Nv, 'dd/MM/yyyy') ngay_sinh,pb.name_pb,nv.luong_Nv from NHANVIEN nv inner join PHONGBAN pb on nv.id_Pb = pb.id_Pb where nv.id_Pb = '" + keyword + "'";
                 }
-                else{
-                  sql= "select nv.id_Nv , nv.name_Nv,FORMAT(nv.ngaysinh_Nv, 'dd/MM/yyyy') ngay_sinh,pb.name_pb,nv.luong_Nv from NHANVIEN nv inner join DUAN da on nv.id_Da = da.id_Da where da.id_Da = '" + keyword + "'";
-                     }
+       
   
                 return da.getTable(sql);
             }
